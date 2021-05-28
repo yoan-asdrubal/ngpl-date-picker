@@ -141,6 +141,7 @@ export class NgplDatePickerComponent implements OnInit, OnChanges, OnDestroy, Co
               date = (val as Moment).toDate();
             }
             if (!!this.format) {
+              console.log('formated', moment(date).format(this.format));
               this._value = moment(date).format(this.format);
             } else if (this.exportMilliseconds === true) {
               this._value = date.getTime();

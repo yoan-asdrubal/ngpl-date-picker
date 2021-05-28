@@ -13,20 +13,44 @@
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
-        formControlName="date" ngplWidth="250px" placeHolder="Date Picker">
+        formControlName="date" ngplWidth="250px" placeHolder="Default Date picker">
 
       </ngpl-date-picker>
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
         exportMilliseconds="false"
-        formControlName="date1" ngplWidth="250px" placeHolder="Date Picker">
+        formControlName="date1" ngplWidth="250px" placeHolder="Export as Date">
 
       </ngpl-date-picker>
       <ngpl-date-picker
-        format="'DD-MM-yyyy'"
+        format="DD-MM-yyyy"
         [readOnlyControl]="readOnlyControl.value"
-        formControlName="date2" ngplWidth="250px" placeHolder="Date Picker">
+        formControlName="date2" ngplWidth="250px" placeHolder="Formatted Value">
+
+      </ngpl-date-picker>
+
+    </div>
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-date-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        formControlName="min" ngplWidth="250px" placeHolder="Min Value">
+
+      </ngpl-date-picker>
+      <ngpl-date-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        exportMilliseconds="false"
+        formControlName="max" ngplWidth="250px" placeHolder="Max Value">
+
+      </ngpl-date-picker>
+      <ngpl-date-picker
+        format="DD-MM-yyyy"
+        [min]="formGroup.get('min').value"
+        [max]="formGroup.get('max').value"
+        [readOnlyControl]="readOnlyControl.value"
+        formControlName="value" ngplWidth="250px" placeHolder="Select Date">
 
       </ngpl-date-picker>
 

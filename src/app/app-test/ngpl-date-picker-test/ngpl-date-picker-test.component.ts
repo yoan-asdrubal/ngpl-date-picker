@@ -25,6 +25,9 @@ export class NgplDatePickerTestComponent implements OnInit {
       date: [],
       date1: [],
       date2: [],
+      min: [],
+      max: [],
+      value: [],
 
     });
 
