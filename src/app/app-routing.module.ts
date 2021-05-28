@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {NgplSelectMultipleTestComponent} from './app-test/ngpl-select-multiple-test/ngpl-select-multiple-test.component';
+import {NgplDatePickerTestComponent} from './app-test/ngpl-date-picker-test/ngpl-date-picker-test.component';
 
 const routes: Routes = [
   {
-    path: 'ngpl-select-multiple',
-    component: NgplSelectMultipleTestComponent
+    path: 'ngpl-date-picker',
+    component: NgplDatePickerTestComponent
   }, {
     path: '**',
-    component: NgplSelectMultipleTestComponent
+    component: NgplDatePickerTestComponent
   }
 ];
 

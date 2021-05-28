@@ -1,0 +1,41 @@
+<section>
+  <h1>NGPL DATE PICKER</h1>
+  <div>
+    <mat-checkbox [formControl]="disableControl" class="mr-3">
+      Disable Control
+    </mat-checkbox>
+    <mat-checkbox [formControl]="readOnlyControl" class="mr-3">
+      ReadOnly Control
+    </mat-checkbox>
+  </div>
+  <form [formGroup]="formGroup" fxLayout="column">
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-date-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        formControlName="date" ngplWidth="250px" placeHolder="Date Picker">
+
+      </ngpl-date-picker>
+      <ngpl-date-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        exportMilliseconds="false"
+        formControlName="date1" ngplWidth="250px" placeHolder="Date Picker">
+
+      </ngpl-date-picker>
+      <ngpl-date-picker
+        format="'DD-MM-yyyy'"
+        [readOnlyControl]="readOnlyControl.value"
+        formControlName="date2" ngplWidth="250px" placeHolder="Date Picker">
+
+      </ngpl-date-picker>
+
+    </div>
+  </form>
+
+  <div fxLayout="" fxLayoutAlign="space-between">
+    <pre>{{formGroup.value | json}}</pre>
+    <pre>{{formGroup.getRawValue() | json}}</pre>
+  </div>
+
+</section>

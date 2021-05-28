@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgplSelectMultipleTestComponent } from './ngpl-select-multiple-test.component';
+import { NgplDatePickerTestComponent } from './ngpl-date-picker-test.component';
 
 describe('NgplSelectTestComponent', () => {
-  let component: NgplSelectMultipleTestComponent;
-  let fixture: ComponentFixture<NgplSelectMultipleTestComponent>;
+  let component: NgplDatePickerTestComponent;
+  let fixture: ComponentFixture<NgplDatePickerTestComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgplSelectMultipleTestComponent ]
+      declarations: [ NgplDatePickerTestComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgplSelectMultipleTestComponent);
+    fixture = TestBed.createComponent(NgplDatePickerTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

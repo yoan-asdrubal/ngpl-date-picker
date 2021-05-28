@@ -24,10 +24,10 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {NgplSelectMultipleTestComponent} from './app-test/ngpl-select-multiple-test/ngpl-select-multiple-test.component';
+import {NgplDatePickerTestComponent} from './app-test/ngpl-date-picker-test/ngpl-date-picker-test.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgplCommonModule} from 'ngpl-common';
-import {NgplSelectMultipleModule} from './ngpl/src/lib';
+import {NgplDatePickerModule} from './ngpl/src/lib';
 // import 'ngpl-common/lib/ngpl-interfaces/string.interface';
 // import 'ngpl-common/lib/ngpl-interfaces/object.interface';
 
@@ -57,7 +57,7 @@ const materialModules = [
   declarations: [
     AppComponent,
     SideNavComponent,
-    NgplSelectMultipleTestComponent
+    NgplDatePickerTestComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +67,7 @@ const materialModules = [
     ReactiveFormsModule,
     materialModules,
     NgplCommonModule,
-    NgplSelectMultipleModule
+    NgplDatePickerModule
   ],
   providers: [{
     provide: LOCALE_ID, useValue: 'es-cl'
