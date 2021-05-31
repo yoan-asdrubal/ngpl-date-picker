@@ -7,18 +7,23 @@
     <mat-checkbox [formControl]="readOnlyControl" class="mr-3">
       ReadOnly Control
     </mat-checkbox>
+    <mat-checkbox [formControl]="loadingControl" class="mr-3">
+      Show Loading
+    </mat-checkbox>
   </div>
   <form [formGroup]="formGroup" fxLayout="column">
     <div fxLayout fxLayoutAlign="space-around">
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
         formControlName="date" ngplWidth="250px" placeHolder="Default Date picker">
 
       </ngpl-date-picker>
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
         exportMilliseconds="false"
         formControlName="date1" ngplWidth="250px" placeHolder="Export as Date">
 
@@ -26,7 +31,10 @@
       <ngpl-date-picker
         format="DD-MM-yyyy"
         [readOnlyControl]="readOnlyControl.value"
-        formControlName="date2" ngplWidth="250px" placeHolder="Formatted Value">
+        [showLoading]="loadingControl.value"
+        showLoadingWith="50%"
+        showLoadingHeight="20px"
+        formControlName="date2" ngplWidth="250px" placeHolder="Formatted Value and loading">
 
       </ngpl-date-picker>
 
@@ -35,12 +43,14 @@
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
         formControlName="min" ngplWidth="250px" placeHolder="Min Value">
 
       </ngpl-date-picker>
       <ngpl-date-picker
         [ngplDisableControl]="disableControl.value"
         [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
         exportMilliseconds="false"
         formControlName="max" ngplWidth="250px" placeHolder="Max Value">
 
@@ -50,7 +60,9 @@
         [min]="formGroup.get('min').value"
         [max]="formGroup.get('max').value"
         [readOnlyControl]="readOnlyControl.value"
-        formControlName="value" ngplWidth="250px" placeHolder="Select Date">
+        [showLoading]="loadingControl.value"
+        showLoadingWith="100%"
+        formControlName="value" ngplWidth="250px" placeHolder="Select Date and full width">
 
       </ngpl-date-picker>
 
@@ -61,5 +73,6 @@
     <pre>{{formGroup.value | json}}</pre>
     <pre>{{formGroup.getRawValue() | json}}</pre>
   </div>
+
 
 </section>

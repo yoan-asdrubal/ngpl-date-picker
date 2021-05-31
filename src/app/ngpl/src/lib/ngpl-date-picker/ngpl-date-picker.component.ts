@@ -77,7 +77,9 @@ export class NgplDatePickerComponent implements OnInit, OnChanges, OnDestroy, Co
   @Input() customClass: '';
 
   /**  Controla si el componenten debe mostrar un Skeleton */
-  @Input() skeleton = false;
+  @Input() showLoading = false;
+  @Input() showLoadingWith = '100%';
+  @Input() showLoadingHeight = '15px';
 
   @Input() exportMilliseconds = true;
   _value;

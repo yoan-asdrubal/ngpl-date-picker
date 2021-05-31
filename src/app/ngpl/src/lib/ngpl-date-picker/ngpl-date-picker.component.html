@@ -1,11 +1,11 @@
 <mat-form-field class="widget-date-picker-mat-form-field {{customClass}}"
                 color="accent"
                 [appearance]="appearance"
-                [floatLabel]="floatLabel"
+                [floatLabel]="showLoading ? 'always' : 'never'"
 
 >
-    <mat-label>{{ skeleton && !inputControl.value ? '' : placeHolder}}</mat-label>
-    <ngpl-skeleton width="75%" height="15px" [isLoading]="skeleton">
+    <mat-label>{{placeHolder}}</mat-label>
+    <ngpl-skeleton [width]="showLoadingWith" [height]="showLoadingHeight"  [isLoading]="showLoading">
         <input [min]="_min" [max]="_max" matInput autocomplete="off"
                ngDefaultControl
                [matDatepicker]="picker3"
@@ -17,6 +17,9 @@
     <mat-datepicker #picker3>
     </mat-datepicker>
     <mat-datepicker-toggle matSuffix [disabled]="disabledControl || readOnlyControl"
-                           [for]="picker3"></mat-datepicker-toggle>
+                           *ngIf="showLoading!==true"
+                           [for]="picker3">
+
+    </mat-datepicker-toggle>
 </mat-form-field>
 <!--{{inputControl.value | json}}-->
