@@ -74,11 +74,13 @@ export class NgplDatePickerComponent implements OnInit, OnChanges, OnDestroy, Co
   /** Define el atributo appearance del matFormField, permite los mismos valores */
   @Input() appearance: 'legacy' | 'standard' | 'fill' | 'outline' | 'default' = 'outline';
 
+  @Input() color = 'accent';
+
   @Input() customClass: '';
 
   /**  Controla si el componenten debe mostrar un Skeleton */
   @Input() showLoading = false;
-  @Input() showLoadingWith = '100%';
+  @Input() showLoadingWidth = '100%';
   @Input() showLoadingHeight = '15px';
 
   @Input() exportMilliseconds = true;
