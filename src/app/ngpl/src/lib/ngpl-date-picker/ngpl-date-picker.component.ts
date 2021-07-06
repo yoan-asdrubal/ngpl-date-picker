@@ -1,9 +1,3 @@
-/*
- *
- * Yoan Asdrubal Quintana Ramirez.
- *  8/7/2019
- *
- */
 
 import {
   ChangeDetectionStrategy,
@@ -25,7 +19,7 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {Changes} from 'ngx-reactivetoolkit';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {NGPL_FILTER_BASE} from 'ngpl-common';
+import {NGPL_FILTER_BASE, NgplFilterBase} from 'ngpl-filter';
 
 const DATE_FORMATS = {
   parse: {
@@ -65,7 +59,7 @@ const DATE_FORMATS = {
     }
   ]
 })
-export class NgplDatePickerComponent implements OnInit, OnChanges, OnDestroy, ControlValueAccessor {
+export class NgplDatePickerComponent implements OnInit, OnChanges, OnDestroy, ControlValueAccessor, NgplFilterBase {
 
   @Input() placeHolder = '';
 
