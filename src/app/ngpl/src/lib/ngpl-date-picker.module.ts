@@ -8,6 +8,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import {NgplCommonDirectivesModule, NgplCommonModule} from 'ngpl-common';
 import {NgplDatePickerComponent} from './ngpl-date-picker/ngpl-date-picker.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {NgplFilterModule} from 'ngpl-filter';
 
 const components = [
   NgplDatePickerComponent,
@@ -25,6 +26,7 @@ const components = [
     MatDatepickerModule,
     OverlayModule,
     NgplCommonModule,
+    NgplFilterModule,
     NgplCommonDirectivesModule
   ]
 })
