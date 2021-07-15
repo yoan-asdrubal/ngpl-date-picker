@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4200 --base-href /",
-    "build": "ng build --prod --base-href /ngpl-date-picker.github.io/",
+    "build": "ng build --prod --base-href /ngpl-date-picker/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
