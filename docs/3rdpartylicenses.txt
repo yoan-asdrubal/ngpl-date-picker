@@ -171,6 +171,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ngpl-common
 
+ngpl-filter
+
 ngx-reactivetoolkit
 MIT
 MIT License
